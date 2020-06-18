@@ -33,5 +33,5 @@ The files in log_data are used to make entries in user and time tables.Whereas,t
 
 # Working of the code:
 For the efficient working of the following files have been implemented:
-1.Start with running create_tables.py.This will initialise the database and create the required five tables.
-2.Follow with running etl.py.This will load the data from the log_data,song_data and start making entries in the tables.
+- Start with running create_tables.py.This will initialise the database and create the required five tables.
+- Follow with running etl.py.This will load the data from the log_data,song_data and start making entries in the tables.
