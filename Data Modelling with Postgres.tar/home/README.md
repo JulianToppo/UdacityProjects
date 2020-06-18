@@ -3,12 +3,12 @@
 # Introduction
 The following project consists of createing a database which can be used to analyze the user activity on their new music streaming app.The set of user activities which were before stored in set of folders now can queried from a set of tables easily.
 The following project consists of six files:
-**create_tables.py**
-**etl.ipynb
-**etl.py
-**README.md
-**sql_queries.py
-**test.ipynb
+* create_tables.py
+* etl.ipynb
+* etl.py
+* README.md
+* sql_queries.py
+* test.ipynb
 
 **sql_queries.py**
 The structure of every tables being used in the project is taken care in this file.The insertion,creationg and drop queries are declared in this file which can be used by other files for making changes.
