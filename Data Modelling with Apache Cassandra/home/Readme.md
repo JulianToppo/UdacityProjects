@@ -2,13 +2,13 @@
 
 ## Introduction
 
-The following project consists of createing a database which can be used to analyze the user activity on their new music streaming app.The set of user activities which were before stored in set of folders now can queried from a set of tables easily.
+The following project consists of creating a database which can be used to analyze the user activity on their new music streaming app.The set of user activities which were before stored in set of folders now can queried from a set of tables easily.
 The following project consists of following files and folders:
-* `queries.py`
-* `Project_1B_ Project_ETL.ipynb`
-* `event_datafile_new.csv`
-* `event_data`
-* `images`
+* queries.py
+* Project_1B_ Project_ETL.ipynb
+* event_datafile_new.csv
+* event_data
+* images
 
 - queries.py consists of the set of queries for dropping,creating and selecting within the database.
 - 'Project_1B_ Project_ETL.ipynb" consists of set of functions and code that needs to be followed for the proper generating of a combined csv file and implementation of the queries.
@@ -17,7 +17,7 @@ The following project consists of following files and folders:
 
 
 ## Approach
-The following set of tables have been structured taking in consideration the requiremnt of the three queries.The following tables named music_library,user_library and song_library with their partition and clustering are being generated.
+The following set of tables have been structured taking in consideration the requirementnt of the three queries.The following tables named music_library,user_library and song_library with their partition and clustering are being generated.
 The data present in csv files in event_data are being used to put enteries into the tables using the process of Extract,Transform and Load and thus creating a pipeline for the datatransfer.
 
 ## Working
