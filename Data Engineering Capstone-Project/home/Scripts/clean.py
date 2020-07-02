@@ -1,19 +1,20 @@
 from pyspark.sql import SparkSession, SQLContext, GroupedData
 from pyspark.sql.functions import *
 from pyspark.sql.functions import date_add as d_add
-from pyspark.sql.types import DoubleType
+from pyspark.sql.types import *
+
 
 
 class Clean:
     """
-    Clean de origin datasets
+    Clean the origin datasets
     """
 
 
     @staticmethod
     def get_cities_demographics(demographics):
         """
-        Clean demographics dataset, filling null values withn 0 and grouping by city and state and pivot
+        Clean demographics dataset, filling null values within 0 and grouping by city and state and pivot
         Race in diferent columns.
         :param demographics: demographics dataset
         :return: demographics dataset cleaned
@@ -48,14 +49,18 @@ class Clean:
         return airports
 
     @staticmethod
-    def get_inmigration(inmigration):
+    def get_immigration(immigration):
         """
-        Clean the inmigrantion dataset. Rename columns with understandable names. Put correct formats in dates and s
+        Clean the immigrantion dataset. Rename columns with understandable names. Put correct formats in dates and s
         elect only important columns 
         :param inmigration: inmigrantion dataset
         :return: inmigrantion dataset cleaned
         """
-        inmigration = inmigration \
+        immigration=immigration.withColumn("arrdate", immigration["arrdate"].cast(IntegerType()))
+        
+        immigration=immigration.withColumn("depdate", immigration["depdate"].cast(IntegerType()))
+        
+        immigration = immigration \
             .withColumn("cic_id", col("cicid").cast("integer")) \
             .drop("cicid") \
             .withColumnRenamed("i94addr", "cod_state") \
@@ -83,7 +88,7 @@ class Clean:
             .withColumn("departure_date", expr("date_add(data_base_sas, depdate)")) \
             .drop("data_base_sas", "arrdate", "depdate")
 
-        return inmigration.select(col("cic_id"), col("cod_port"), col("cod_state"), col("visapost"), col("matflag"),
+        return immigration.select(col("cic_id"), col("cod_port"), col("cod_state"), col("visapost"), col("matflag"),
                                   col("dtaddto") \
                                   , col("gender"), col("airline"), col("admnum"), col("fltno"), col("visatype"),
                                   col("cod_visa"), col("cod_mode") \

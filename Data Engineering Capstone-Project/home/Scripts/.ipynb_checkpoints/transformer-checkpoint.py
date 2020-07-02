@@ -38,18 +38,18 @@ class Transformer:
         return demo
 
     @staticmethod
-    def transform_inmigrants(inmigrants):
+    def transform_immigrants(immigrants):
         """
         Transform inmigration dataset on order to get arrival date in different columns (year, month, day) 
         for partitioning the dataset.
         :param inmigrants: inmigration dataset
         :return: inmigration dataset transformed
         """
-        inmigrants = inmigrants \
+        immigrants = immigrants \
             .withColumn("arrival_date-split", split(col("arrival_date"), "-")) \
             .withColumn("arrival_year", col("arrival_date-split")[0]) \
             .withColumn("arrival_month", col("arrival_date-split")[1]) \
             .withColumn("arrival_day", col("arrival_date-split")[2]) \
             .drop("arrival_date-split")
 
-        return inmigrants
+        return immigrants

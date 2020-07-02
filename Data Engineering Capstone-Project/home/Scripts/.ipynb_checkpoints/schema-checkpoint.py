@@ -17,21 +17,21 @@ class Schema:
 
     def _modelize_demographics(self, demographics):
         """
-        Create de demographics dimension table in parquet.
+        Create the demographics dimension table in parquet.
         :param demographics: demographics dataset.
         """
         demographics.write.mode('overwrite').parquet(self.paths["demographics"])
 
     def _modelize_airports(self, airports):
         """
-        Create de airports dimension table in parquet.
+        Create the airports dimension table in parquet.
         :param airports: airports dataset
         """
         airports.write.mode('overwrite').parquet(self.paths["airports"])
 
     def _modelize_airlines(self, airlines):
         """
-        Create de airlines dimension table in parquet.
+        Create the airlines dimension table in parquet.
         :param airlines: airlines dataset
         """
         airlines.write.mode('overwrite').parquet(self.paths["airlines"])

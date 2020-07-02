@@ -34,10 +34,10 @@ class Datafromsource:
         """
         return self._get_standard_csv(self.paths["airports"])
 
-    def get_inmigration_raw(self):
+    def get_immigration_raw(self):
         """
-        Get inmigration dataset.
-        :return: inmigration dataset
+        Get immigration dataset.
+        :return: immigration dataset
         """
         return self.spark.read.parquet(self.paths["sas_data"])
 
