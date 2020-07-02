@@ -10,10 +10,11 @@ The following project consists of following files and folders:
 * event_data
 * images
 
-- queries.py consists of the set of queries for dropping,creating and selecting within the database.
-- 'Project_1B_ Project_ETL.ipynb" consists of set of functions and code that needs to be followed for the proper generating of a combined csv file and implementation of the queries.
-- "event_datafile_new.csv" is the final csv consisting of the combined data from all the csv files.
-- "event_data" consists of set of csv files to be used to generate the data for the tables.
+### File Description
+ - **queries.py** consists of the set of queries for dropping,creating and selecting within the database.
+ - **Project_1B_ Project_ETL.ipynb** consists of set of functions and code that needs to be followed for the proper generating of a combined csv file and implementation of the q-queries.
+ - **event_datafile_new.csv** is the final csv consisting of the combined data from all the csv files.
+ - **event_data** consists of set of csv files to be used to generate the data for the tables.
 
 
 ## Approach
