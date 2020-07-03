@@ -1,7 +1,7 @@
 # Project Explanation:
 
 # Introduction
-The following project consists of createing a database which can be used to analyze the user activity on their new music streaming app.The set of user activities which were before stored in set of folders now can queried from a set of tables easily.
+The following project consists of creating a database which can be used to analyze the user activity on their new music streaming app.The set of user activities which were before stored in set of folders now can queried from a set of tables easily.
 The following project consists of six files:
 * create_tables.py
 * etl.ipynb
