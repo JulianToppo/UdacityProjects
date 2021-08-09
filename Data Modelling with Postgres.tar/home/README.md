@@ -14,7 +14,7 @@ The following project consists of six files:
 The structure of every tables being used in the project is taken care in this file.The insertion,creation and drop queries are declared in this file which can be used by other files for making changes.
 
 **create_tables.py**
-This files takes care of initialisation of the database and making connection to it.The five tables songs,artists,user,time,songplay are initialised within thin file.
+This files takes care of initialisation of the database and making connection to it.The five tables songs,artists,user,time,songplay are initialised within this file.
 Note:Every time when trying to make new entry to a tables make sure the tables are resetted using create_table.py.
 
 **etl.py**
