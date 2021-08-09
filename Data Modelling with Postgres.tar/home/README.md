@@ -11,7 +11,7 @@ The following project consists of six files:
 * test.ipynb
 
 **sql_queries.py**
-The structure of every tables being used in the project is taken care in this file.The insertion,creationg and drop queries are declared in this file which can be used by other files for making changes.
+The structure of every tables being used in the project is taken care in this file.The insertion,creation and drop queries are declared in this file which can be used by other files for making changes.
 
 **create_tables.py**
 This files takes care of initialisation of the database and making connection to it.The five tables songs,artists,user,time,songplay are initialised within thin file.
